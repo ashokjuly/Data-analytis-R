@@ -1,0 +1,46 @@
+
+
+1. x <- c(‘data.science.in.R’, ‘machine.learning.in.R’)
+Perform the below string Operation:
+• Replace the period character "." within each string with another character i.e. "-" minus sign.
+
+
+x <- c("data.science.in.R", "machine.learning.in.R")
+
+gsub(".", "-", x, fixed = TRUE)
+
+[1] "data-science-in-R"     "machine-learning-in-R"
+
+
+2. x <- c('data.science.in.R','machine.learning.in.R')
+Perform the below String Operation:
+• Append again with “-“ minus sign character at the start of the each string and finally concatenate all the
+
+x <- c("data.science.in.R", "machine.learning.in.R")
+
+gsub("\\.*","-",x)
+
+[1] "-d-a-t-a-s-c-i-e-n-c-e-i-n-R-"   
+
+
+[2] "-m-a-c-h-i-n-e-l-e-a-r-n-i-n-g-i-n-R-"
+
+M <- gsub("\\.*","-",x)
+
+
+> M
+
+[1] "-d-a-t-a-s-c-i-e-n-c-e-i-n-R-" 
+
+ 
+[2] "-m-a-c-h-i-n-e-l-e-a-r-n-i-n-g-i-n-R-"
+
+
+string within the vector to form a final single string and assigning it the object.
+
+x <- c("data.science.in.R", "machine.learning.in.R")
+
+
+paste0(gsub("\\.*","-",x),collapse="")
+
+[1] "-d-a-t-a-s-c-i-e-n-c-e-i-n-R--m-a-c-h-i-n-e-l-e-a-r-n-i-n-g-i-n-R-"
